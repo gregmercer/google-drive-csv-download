@@ -1,4 +1,4 @@
-google-drive-download
+google-drive-csv-download
 =====================
 
 Example of downloading a google drive spreadsheet using csv format
