@@ -39,6 +39,7 @@ foreach ($list_files['items'] as $key => $value) {
     $csv_link = str_replace('=pdf', '=csv', $csv_link);
     print "csv link = $csv_link\n";
     print_r(downloadFile($csv_link));
+    print "\n";
     break;
   }
 }
