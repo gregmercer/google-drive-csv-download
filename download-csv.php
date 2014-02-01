@@ -29,18 +29,18 @@ $list_files = $files->listFiles();
 
 foreach ($list_files['items'] as $key => $value) {
 	$title = $value['title'];
-	if ($title == $download_doc_title) {
-		print "title = $title\n";
-		$id = $value['id'];
-		$data = $service->files->get($value['id']);
-		$file = new Google_DriveFile($data);
-		$export_links = $file->getExportLinks();
-		$csv_link = $export_links['application/pdf'];
-		$csv_link = str_replace('=pdf', '=csv', $csv_link);
-		print "csv link = $csv_link\n";
-		print_r(downloadFile($csv_link));
-		break;
-	}
+  if ($title == $download_doc_title) {
+    print "title = $title\n";
+    $id = $value['id'];
+    $data = $service->files->get($value['id']);
+    $file = new Google_DriveFile($data);
+    $export_links = $file->getExportLinks();
+    $csv_link = $export_links['application/pdf'];
+    $csv_link = str_replace('=pdf', '=csv', $csv_link);
+    print "csv link = $csv_link\n";
+    print_r(downloadFile($csv_link));
+    break;
+  }
 }
 
 function downloadFile($downloadUrl) {
