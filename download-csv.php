@@ -5,7 +5,7 @@ require_once 'google-api-php-client/src/contrib/Google_DriveService.php';
 $download_doc_title = 'the title of document goes here';
 
 $client = new Google_Client();
-// Get your credentials from the console
+
 $client->setClientId('your client goes here');
 $client->setClientSecret('your client secret goes here');
 $client->setRedirectUri('urn:ietf:wg:oauth:2.0:oob');
