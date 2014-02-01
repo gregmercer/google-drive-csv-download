@@ -28,7 +28,7 @@ $files = $service->files;
 $list_files = $files->listFiles();
 
 foreach ($list_files['items'] as $key => $value) {
-	$title = $value['title'];
+  $title = $value['title'];
   if ($title == $download_doc_title) {
     print "title = $title\n";
     $id = $value['id'];
